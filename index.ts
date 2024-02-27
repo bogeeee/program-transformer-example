@@ -1,6 +1,5 @@
 import ts, { CompilerHost, CompilerOptions, Program, SyntaxKind, TransformationContext, SourceFile, Node } from 'typescript';
 import { PluginConfig, ProgramTransformerExtras } from "ts-patch";
-import path from 'path';
 import {} from 'ts-expose-internals'
 import ex = CSS.ex;
 
