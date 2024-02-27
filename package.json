@@ -1,0 +1,20 @@
+{
+  "name": "program-transformer-example",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "tsc --build --clean",
+    "build": "tsc --build"
+  },
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    }
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "ts-patch": "^3.1.2",
+    "typescript": "^5.3.3",
+    "@types/ts-expose-internals": "npm:ts-expose-internals@5.3.3"
+  }
+}
