@@ -4,7 +4,7 @@
   "description": "Example files that get transformed",
   "scripts": {
     "clean": "npm run --prefix .. clean && tspc --build --clean",
-    "do-the-build": "tspc --build --force"
+    "do-the-build": "tspc"
   },
   "dependencies": {
   },
