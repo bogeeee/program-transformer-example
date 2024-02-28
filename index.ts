@@ -48,8 +48,13 @@ export default function transformProgram(
     program: Program,
     host: CompilerHost | undefined,
     config: PluginConfig,
-    { ts: tsInstance }: ProgramTransformerExtras,
+    extras?: ProgramTransformerExtras,
 ): Program {
+    if(!extras) {
+        throw new Error(`Please add the flag "transformProgram": true to the transformer inside tsconfig.json`);
+    }
+
+    const { ts: tsInstance } = extras;
     const compilerOptions = program.getCompilerOptions();
     const compilerHost = getPatchedHost(host, tsInstance, compilerOptions);
     const rootFileNames = program.getRootFileNames().map(tsInstance.normalizePath);
