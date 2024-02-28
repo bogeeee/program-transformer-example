@@ -14,7 +14,7 @@
     "esModuleInterop": true,
     "strictNullChecks": true,
     "plugins": [
-      { "transform": "../index.ts" },
+      { "transform": "../index.ts", "transformProgram": true},
     ]
   },
 }

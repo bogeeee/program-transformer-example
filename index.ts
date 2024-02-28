@@ -47,10 +47,9 @@ function getPatchedHost(
 export default function transformProgram(
     program: Program,
     host: CompilerHost | undefined,
-    config: PluginConfig, extras:
-     ProgramTransformerExtras,
+    config: PluginConfig,
+    { ts: tsInstance }: ProgramTransformerExtras,
 ): Program {
-    const tsInstance = config.ts;
     const compilerOptions = program.getCompilerOptions();
     const compilerHost = getPatchedHost(host, tsInstance, compilerOptions);
     const rootFileNames = program.getRootFileNames().map(tsInstance.normalizePath);
