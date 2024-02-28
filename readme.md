@@ -3,7 +3,6 @@ A project that runs [this example program transformer](https://github.com/nonara
 ## Usage:
 Build the tranformer:
  - `npm install`
- - `npm run build`
 
 Transform the example project:   
  - `cd exampleProject`
